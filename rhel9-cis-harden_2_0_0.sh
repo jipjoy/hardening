@@ -70,9 +70,12 @@ fi
 
 ### === Profile Mapping ===
 if [[ "$LEVEL" == "1" ]]; then
-    PROFILE="xccdf_org.ssgproject.content_profile_cis"
+    PROFILE="xccdf_org.ssgproject.content_profile_cis_server_l1"
 elif [[ "$LEVEL" == "2" ]]; then
-    PROFILE="xccdf_org.ssgproject.content_profile_cis_level2_server"
+    PROFILE="xccdf_org.ssgproject.content_profile_cis"
+else
+    echo "[!] Invalid level: $LEVEL"
+    exit 1
 fi
 
 ### === Timestamp and Directories ===
